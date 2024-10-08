@@ -11,8 +11,10 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="content">
-        <script>
+    <div class="bg-light">
+        <div class= "content p-4 bg-white rounded shadow-sm"> 
+            <script>
+        
             window.alert("Welcome To The Order Site!!");
 
             var name = window.prompt("Please enter your name", "Name");
@@ -36,7 +38,7 @@
             d.setDate(d.getDate() + 7);
             var arrivalDate = d.toDateString();
 
-            document.write("<h1>" + greeting + " " + name + ", Welcome To The Ordering Site!</h1>");
+            document.write("<h1 class="text-primary">${greeting},${name}!" </h1>");
 
             if (!isNaN(numberOfItems) && numberOfItems > 0 && numberOfItems < 100) {
                 document.write("<p>The Item Requested: " + itemRequested + "</p>");
