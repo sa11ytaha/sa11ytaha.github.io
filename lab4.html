@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="content">
+        <script>
+            window.alert("Welcome To The Order Site!!");
+
+            var name = window.prompt("Please enter your name", "Name");
+            var itemRequested = window.prompt("Please enter the item requested", "Item");
+            var numberOfItems = window.prompt("Please enter the number of items: ", "Quantity");
+            numberOfItems = parseInt(numberOfItems);
+
+            var now = new Date();
+            var hour = now.getHours();
+
+            var greeting;
+            if (hour < 12) {
+                greeting = "Good Morning";
+            } else if (hour < 18) {
+                greeting = "Good Afternoon";
+            } else {
+                greeting = "Good Evening";
+            }
+
+            const d = new Date();
+            d.setDate(d.getDate() + 7);
+            var arrivalDate = d.toDateString();
+
+            document.write("<h1>" + greeting + " " + name + ", Welcome To The Ordering Site!</h1>");
+
+            if (!isNaN(numberOfItems) && numberOfItems > 0 && numberOfItems < 100) {
+                document.write("<p>The Item Requested: " + itemRequested + "</p>");
+                document.write("<p>The Number of Items Requested: " + numberOfItems + "</p>");
+                document.write("<p>The Expected Arrival Date Of Item Requested: " + arrivalDate + "</p>");
+                document.write("<p>Thanks for ordering, " + name + "!</p>");
+            } else {
+                document.write("<br>");
+                document.write("<p>!ERROR Please Resubmit By Refreshing Page ERROR!</p>");
+                document.write("<br>");
+                document.write("<p>Reminder that the quantity has to be more than 0 and less than 100</p>");
+                document.write("<p>Thank You</p>");
+            }
+        </script>
+    </div>
+</body>
+</html>
