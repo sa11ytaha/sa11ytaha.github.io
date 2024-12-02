@@ -1,0 +1,22 @@
+body {
+    font-family: 'Comic Sans Ms',cursive, sans-serif;
+    color: #e4d0d3;
+    background-color: #f8f9fa;
+  }
+  
+  h1, .card-text{
+      font-family: 'Comic Sans Ms', cursive, sans-serif;
+    color: #e4d0d3;
+  }
+  
+  #factsContainer .card {
+    min-height: 120px;
+  }
+  
+  .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
