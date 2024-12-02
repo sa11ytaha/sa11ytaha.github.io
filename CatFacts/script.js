@@ -1,4 +1,4 @@
-const allFactsEndpoint = "https://cat-fact.herokuapp.com";
+const allFactsEndpoint = "https://cat-fact.herokuapp.com/facts";
 const randomFactEndpoint = "https://cat-fact.herokuapp.com/facts/random";
 const factsContainer = document.getElementById("factsContainer");
 const searchBox = document.getElementById("searchBox");
