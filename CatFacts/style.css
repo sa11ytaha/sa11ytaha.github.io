@@ -1,22 +1,48 @@
 body {
-    font-family: 'Comic Sans Ms',cursive, sans-serif;
-    color: #e4d0d3;
+    font-family: 'Poppins', cursive, sans-serif; 
+    color: #e4d0d3; 
     background-color: #f8f9fa;
-  }
-  
-  h1, .card-text{
-      font-family: 'Comic Sans Ms', cursive, sans-serif;
-    color: #e4d0d3;
-  }
-  
-  #factsContainer .card {
+}
+
+h1, .card-text {
+    font-family: 'Poppins', cursive, sans-serif;
+    color: #e4d0d3; 
+}
+
+#factsContainer .card {
     min-height: 120px;
-  }
-  
-  .card-body {
+}
+
+.card-body {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-  
+}
+
+
+#reloadBtn {
+    background-color: #f6c0c0; 
+    color: #b36b6b; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#reloadBtn:hover {
+    background-color: #f08080; 
+}
+
+.navbar {
+    background-color: #f6c0c0; 
+}
+
+.navbar .navbar-brand {
+    color: #b36b6b; 
+    font-family: 'Poppins', cursive, sans-serif;
+}
+
+.navbar .navbar-brand:hover {
+    color: #ffb6c1; 
+}
