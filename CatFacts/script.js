@@ -1,9 +1,10 @@
 const allFactsEndpoint = "https://cat-fact.herokuapp.com/facts";
 const randomFactEndpoint = "https://cat-fact.herokuapp.com/facts/random";
+
 const factsContainer = document.getElementById("factsContainer");
 const searchBox = document.getElementById("searchBox");
 const reloadBtn = document.getElementById("reloadBtn");
-const randomFactBtn = document.createElement("button");
+const randomFactBtn = document.getElementById("randomfactbtn");
 
 // Add a button for fetching random facts
 randomFactBtn.className = "btn btn-secondary mb-3";
@@ -61,21 +62,6 @@ searchBox.oninput = function () {
     card.style.display = factText.includes(searchTerm) ? "block" : "none";
   });
 };
-const randomFactBtn = document.getElementById("randomFactBtn");
-const randomFactText = document.getElementById("randomFactText");
-
-if (randomFactBtn) {
-  randomFactBtn.addEventListener("click", async () => {
-    try {
-      const response = await fetch("https://cat-fact.herokuapp.com/facts/random");
-      if (!response.ok) throw new Error("Failed to fetch random fact");
-      const fact = await response.json();
-      randomFactText.innerText = fact.text;
-    } catch (error) {
-      randomFactText.innerText = `Error: ${error.message}`;
-    }
-  });
-}
 
 // Reload facts
 reloadBtn.onclick = fetchAllFacts;
