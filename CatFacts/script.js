@@ -1,12 +1,14 @@
 const allFactsEndpoint = "https://cat-fact.herokuapp.com/facts";
 const randomFactEndpoint = "https://cat-fact.herokuapp.com/facts/random";
-
 const factsContainer = document.getElementById("factsContainer");
 const searchBox = document.getElementById("searchBox");
 const reloadBtn = document.getElementById("reloadBtn");
-const randomFactBtn = document.getElementById("randomfactbtn");
+const randomFactBtn = document.createElement("button");
 
-randomFactBtn.onclick= fetchRandomFact;
+// Add a button for fetching random facts
+randomFactBtn.className = "btn btn-secondary mb-3";
+randomFactBtn.innerText = "Show Random Fact";
+document.querySelector(".container").insertBefore(randomFactBtn, factsContainer);
 
 // Fetch all facts from the API
 async function fetchAllFacts() {
