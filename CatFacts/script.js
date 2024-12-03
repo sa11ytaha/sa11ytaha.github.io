@@ -61,6 +61,21 @@ searchBox.oninput = function () {
     card.style.display = factText.includes(searchTerm) ? "block" : "none";
   });
 };
+const randomFactBtn = document.getElementById("randomFactBtn");
+const randomFactText = document.getElementById("randomFactText");
+
+if (randomFactBtn) {
+  randomFactBtn.addEventListener("click", async () => {
+    try {
+      const response = await fetch("https://cat-fact.herokuapp.com/facts/random");
+      if (!response.ok) throw new Error("Failed to fetch random fact");
+      const fact = await response.json();
+      randomFactText.innerText = fact.text;
+    } catch (error) {
+      randomFactText.innerText = `Error: ${error.message}`;
+    }
+  });
+}
 
 // Reload facts
 reloadBtn.onclick = fetchAllFacts;
