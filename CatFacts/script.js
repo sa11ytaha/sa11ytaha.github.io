@@ -6,6 +6,7 @@ const searchBox = document.getElementById("searchBox");
 const reloadBtn = document.getElementById("reloadBtn");
 const randomFactBtn = document.getElementById("randomfactbtn");
 
+randomFactBtn.onclick= fetchRandomFact;
 
 // Fetch all facts from the API
 async function fetchAllFacts() {
